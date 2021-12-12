@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Video Games Sales</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" lang="en" content="open source html and css template">
+    <meta name="author" content="mlp design">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/form.css">
+</head>
+
+<body>
+
+    <!--<div id="menu">
+        <nav>
+            <label for="show-menu" class="responsive">&#9776;</label>
+            <input type="checkbox" id="show-menu" role="button">
+            <ul id="topnav">
+                <li><span class="icon"><a href="#" title="Your Logo" class="logo">&#x1F47d;</a></span></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Archive</a></li>
+                <li><a href="#">Links</a></li>
+                <li><a href="#">Help</a></li>
+                <li><span class="icon"><a href="#" class="search">&#x1f50d;</a></span></li>
+            </ul>
+            <span class="hide"><a href="#" title="Your Logo" class="logo">&#x1F47d;</a></span>
+            <span class="hide"><a href="#" class="search">&#x1F50d;</a></span>
+        </nav>
+    </div>-->
+    <div id="container">
+
+        <div id="pageheader">
+            <div class="col">
+                <h1>Video Games Sales</h1>
+            </div>
+            <div class="col">
+                <ul id="sub">
+                    <li><a href="#welcome"">Welcome</a></li><li><a href="#analytics"">Analytics</a></li>
+                    <li><a href="#howto"">How to use</a></li><li><a href="#predict"">Predict</a></li>
+                    <li><a href="#reach"">Social links</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="section" id="welcome">
+
+            <div class="pageitem">
+                <h2>Welcome!</h2>
+                <p><em class="title">Why Use This App?</em></p>
+            </div>
+
+            <div class="pageitem">
+                <div class="pageitem">
+                    <p>The video gaming industry has been described as one of the ‘Winners of the Pandemic’ in recent months. 
+                        While the activity of playing video games can be seen as trivial, the industry around developing and publishing video games is now big business.</p>
+                </div>
+                
+                <div class="pageitem"> 
+                    <p>The sector is still growing, a compound annual growth rate of <b>12%</b> is forecast between 2020 and 2025, an indication that there is a lot of room for the sector to continue to grow.</p>
+                    <p><em>Gaming is now more valuable than film, music and TV combined, with</em></p>
+                </div>
+
+                <div class="pageitem">
+                    <div class="col"><p><em>2.7 Billion </em>players</p></div><div class="col"><p><em>&</em></p></div><div class="col"><p><em>£160 Billion </em>Revenue</p></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="section" id="analytics">
+
+            <div class="pageitem">
+                <h2>Want to develop a video game?</h2>
+                <p><em class="title">Here are some insights</em></p>
+            </div>
+
+            <div class="pageitem">
+                <p>content here</p>
+            </div>
+
+        </div>
+
+        <div class="section" id="howto">
+            <div class="pageitem">
+                <h2>How to use our app?</h2>
+                <p><em class="title">It is super easy, super intuitive!</em></p>
+            </div>
+
+            <div class="pageitem">
+                <p>content here</p>
+            </div>
+        </div>
+
+        <div class="section" id="predict">
+
+            <div class="pageitem">
+                <h2>Predict Your Success</h2>
+            </div>
+
+            <div class="pageitem">
+                <div class="form">
+                    <form>
+                        <label for="score">Estimated Critic Score</label>
+                        <input type="text" name="score" id="score" value="70">
+    
+                        <label for="platform">Platform</label>
+                        <select id="platform" name="platform">
+                            <option value="0">3DS</option>
+                            <option value="1">DC</option>
+                            <option value="2">DS</option>
+                            <option value="3">GBA</option>
+                            <option value="4">GC</option>
+                            <option value="5">PC</option>
+                            <option value="6">PS</option>
+                            <option value="7">PS2</option>
+                            <option value="8">PS3</option>
+                            <option value="9" selected>PS4</option>
+                            <option value="10">PSP</option>
+                            <option value="11">PSV</option>
+                            <option value="12">Wii</option>
+                            <option value="13">WiiU</option>
+                            <option value="14">Xbox 360</option>
+                            <option value="15">Xbox</option>
+                            <option value="16">Xbox One</option>
+                        </select>
+
+                        <label for="genre">Genre</label>
+                        <select id="genre" name="genre">
+                            <option value="0">Action</option>
+                            <option value="1" selected>Adventure</option>
+                            <option value="2">Fighting</option>
+                            <option value="3">Misc</option>
+                            <option value="4">Platform</option>
+                            <option value="5">Puzzle</option>
+                            <option value="6">Racing</option>
+                            <option value="7">Role-Playing</option>
+                            <option value="8">Shooter</option>
+                            <option value="9">Simulation</option>
+                            <option value="10">Sports</option>
+                            <option value="11">Strategy</option>
+                        </select>
+
+                        <label for="Rating">Rating</label>
+                        <select id="rating" name="rating">    
+                            <option value="0">A0</option>
+                            <option value="1" selected>E</option>
+                            <option value="2">E10+</option>
+                            <option value="3">K-A</option>
+                            <option value="4">M</option>
+                            <option value="5">RP</option>                           
+                            <option value="6">T</option>                       
+                        </select>
+
+                        <a href="#prediction"> 
+                           <button type="button" value="Submit" onclick="getPrediction(score.value, platform.value, genre.value, rating.value)">Submit</button>
+                        </a>
+                    </form>
+                </div>   
+            </div>
+
+        </div>
+
+        <div class="section" id="prediction" style="display: none;">
+
+            
+
+        </div>
+
+        <div class="section" id="reach">
+            <div id="footer">
+                <div class="pageitem">
+                    <h2>Get Social</h2>
+                </div>
+    
+                <div class="pageitem">
+                    <div class="col">
+                        <a href="https://www.facebook.com/salim.benahmed.7927/"><img src="assets/fa.png">
+                            <p>Visit</p>We are on Facebook<br>facebook.com/salim.benahmed.7927/
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#"><img src="assets/tw.png">
+                            <p>Follow</p>We are on Twitter<br>twitter.com/foo-template
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="https://www.instagram.com/benahmed.salim/"><img src="assets/in.png">
+                            <p>Like</p>We are on Instagram<br>instagram.com/benahmed.salim/
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div id="credits">
+                <div class="col">
+                    <p>&copy; Copyright 2021 Salim Ben Ahmed</p>
+                </div>
+                <div class="col">
+                    <p><a href="#welcome">Welcome</a> | <a href="#analystics">Analytics</a> | <a href="#howto">How to use</a> | <a
+                            href="#predict">Predict</a> | <a href="#reach">Social links</a></p>
+                </div>
+                <div class="col">
+                    <p class="right"><a href="http://mlpdesign.net">HTML & CSS</a> by MLPdesign</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!-- JS -->
+    <script>
+
+        async function getPrediction(score, platform, genre, rating) {
+
+            myObject = fetch("http://0.0.0.0:8000/predict/game-success/?score="+score+"&pltfrm="+platform+"&gnr="+genre+"&rtng="+rating);
+            myObject.then(function(response){
+                response.json().then(function(data){
+                    let na_sales = Math.round(data[0]*1000);
+                    let eu_sales = Math.round(data[1]*1000);
+                    let ja_sales = Math.round(data[2]*1000);
+                    let o_sales = Math.round(data[3]*1000);
+
+                    template =  `
+                    <div class="pageitem">
+                        <h2>Our Prediction is:</h2>
+                        <p><em></em></p>
+                    </div>
+
+                    <div class="pageitem">
+                        <div class="col"><p><em>`+na_sales+`K</em></p><br>Copy sold in NA</div>
+                        <div class="col"><p><em>`+eu_sales+`K</em></p><br>Copy sold in EU</div>
+                        <div class="col"><p><em>`+ja_sales+`K</em></p><br>Copy sold in Japan</div>
+                        <div class="col"><p><em>`+o_sales+`K</em></p><br>Copy sold in Other regions</div>
+                    </div>
+                    <div class="pageitem">
+                        <p><em class="title">Your game can sell up to `+ (na_sales + eu_sales + ja_sales + o_sales) +`K copies</em></p>
+                    </div>
+                    `;
+                    document.getElementById("prediction").style.display = "block";
+                    document.getElementById("prediction").innerHTML = template;
+                })
+            });
+        }
+    </script>
+</body>
+
+</html>
