@@ -11,6 +11,10 @@
     <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/form.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -40,20 +44,20 @@
             </div>
             <div class="col">
                 <ul id="sub">
-                    <li><a href="#welcome"">Welcome</a></li><li><a href="#analytics"">Analytics</a></li>
-                    <li><a href="#howto"">How to use</a></li><li><a href="#predict"">Predict</a></li>
-                    <li><a href="#reach"">Social links</a></li>
+                    <li><a href="#welcome">Welcome</a></li><li><a href="#analytics">Analytics</a></li>
+                    <li><a href="#howto">How to use</a></li><li><a href="#predict">Predict</a></li>
+                    <li><a href="#reach">Social links</a></li>
                 </ul>
             </div>
         </div>
-        <div class="section" id="welcome">
+        <div class="section aos-item" data-aos="fade-up" id="welcome">
 
-            <div class="pageitem">
+            <div class="pageitem aos-item" data-aos="zoom-in-up">
                 <h2>Welcome!</h2>
                 <p><em class="title">Why Use This App?</em></p>
             </div>
 
-            <div class="pageitem">
+            <div class="pageitem aos-item" data-aos="zoom-in-up">
                 <div class="pageitem">
                     <p>The video gaming industry has been described as one of the ‘Winners of the Pandemic’ in recent months. 
                         While the activity of playing video games can be seen as trivial, the industry around developing and publishing video games is now big business.</p>
@@ -70,37 +74,37 @@
             </div>
 
         </div>
-        <div class="section" id="analytics">
+        <div class="section aos-item" data-aos="fade-up" id="analytics">
 
-            <div class="pageitem">
+            <div class="pageitem aos-item" data-aos="zoom-in-up">
                 <h2>Want to develop a video game?</h2>
                 <p><em class="title">Here are some insights</em></p>
             </div>
 
-            <div class="pageitem">
+            <div class="pageitem aos-item" data-aos="zoom-in-up">
                 <p>content here</p>
             </div>
 
         </div>
 
-        <div class="section" id="howto">
-            <div class="pageitem">
+        <div class="section aos-item" data-aos="fade-up" id="howto">
+            <div class="pageitem aos-item" data-aos="zoom-in-up">
                 <h2>How to use our app?</h2>
                 <p><em class="title">It is super easy, super intuitive!</em></p>
             </div>
 
-            <div class="pageitem">
+            <div class="pageitem aos-item" data-aos="zoom-in-up">
                 <p>content here</p>
             </div>
         </div>
 
-        <div class="section" id="predict">
+        <div class="section aos-item" data-aos="fade-up" id="predict">
 
-            <div class="pageitem">
+            <div class="pageitem aos-item" data-aos="zoom-in-up">
                 <h2>Predict Your Success</h2>
             </div>
 
-            <div class="pageitem">
+            <div class="pageitem aos-item" data-aos="zoom-in-up">
                 <div class="form">
                     <form>
                         <label for="score">Estimated Critic Score</label>
@@ -163,19 +167,19 @@
 
         </div>
 
-        <div class="section" id="prediction" style="display: none;">
+        <div class="section aos-item" data-aos="fade-up" id="prediction" style="display: none;">
 
             
 
         </div>
 
-        <div class="section" id="reach">
+        <div class="section aos-item" data-aos="fade-up" id="reach">
             <div id="footer">
-                <div class="pageitem">
+                <div class="pageitem aos-item" data-aos="zoom-in-up">
                     <h2>Get Social</h2>
                 </div>
     
-                <div class="pageitem">
+                <div class="pageitem aos-item" data-aos="zoom-in-up">
                     <div class="col">
                         <a href="https://www.facebook.com/salim.benahmed.7927/"><img src="assets/fa.png">
                             <p>Visit</p>We are on Facebook<br>facebook.com/salim.benahmed.7927/
@@ -215,31 +219,38 @@
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------->
     <!-- JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        easing: 'ease-in-out-sine'
+      });
+    </script>
     <script>
 
         async function getPrediction(score, platform, genre, rating) {
-
-            myObject = fetch("http://0.0.0.0:8000/predict/game-success/?score="+score+"&pltfrm="+platform+"&gnr="+genre+"&rtng="+rating);
+            var ip = location.host;
+            myObject = fetch("http://"+ip+":8000/predict/game-success/?score="+score+"&pltfrm="+platform+"&gnr="+genre+"&rtng="+rating);
             myObject.then(function(response){
                 response.json().then(function(data){
+                    
                     let na_sales = Math.round(data[0]*1000);
                     let eu_sales = Math.round(data[1]*1000);
                     let ja_sales = Math.round(data[2]*1000);
                     let o_sales = Math.round(data[3]*1000);
 
                     template =  `
-                    <div class="pageitem">
+                    <div class="pageitem aos-item" data-aos="zoom-in-up">
                         <h2>Our Prediction is:</h2>
                         <p><em></em></p>
                     </div>
 
-                    <div class="pageitem">
+                    <div class="pageitem aos-item" data-aos="zoom-in-up">
                         <div class="col"><p><em>`+na_sales+`K</em></p><br>Copy sold in NA</div>
                         <div class="col"><p><em>`+eu_sales+`K</em></p><br>Copy sold in EU</div>
                         <div class="col"><p><em>`+ja_sales+`K</em></p><br>Copy sold in Japan</div>
                         <div class="col"><p><em>`+o_sales+`K</em></p><br>Copy sold in Other regions</div>
                     </div>
-                    <div class="pageitem">
+                    <div class="pageitem aos-item" data-aos="zoom-in-up">
                         <p><em class="title">Your game can sell up to `+ (na_sales + eu_sales + ja_sales + o_sales) +`K copies</em></p>
                     </div>
                     `;
