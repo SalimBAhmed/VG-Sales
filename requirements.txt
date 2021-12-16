@@ -5,3 +5,4 @@ pymysql
 sklearn
 pytest
 xgboost
+seaborn
