@@ -16,7 +16,7 @@ Sur linux ( ubuntu ):
 Sur windows: 
 <br />
 
-`env/Scripts/activate.bat`
+`env/Scripts/activate.bat` then
 `python app/main.py`
 <br />
 4. Executer le frontend comme suit:
