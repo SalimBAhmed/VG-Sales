@@ -21,4 +21,5 @@ Sur linux ( ubuntu ): `$ cd front && sudo cp -fr . /var/www/html/`
 <br />
 
 Sur windows: Installez Xampp et mettez le contenu du dossier front dans c://xampp/htdocs
+
 6. Visitez http://localhost/ et essayez l'application.
