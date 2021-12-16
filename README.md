@@ -8,14 +8,15 @@ Realisé par Salim Ben Ahmed et Najeh Touil
 1. Clonez le repo
 2. Ouvrez le dossier cloné
 3. Executez le backend comme suit: 
-Sur linux ( ubuntu ): `$ source env/bin/activate && python3 app/main.py`
+<br />
+Sur linux ( ubuntu ): 
+
+`$ source env/bin/activate && python3 app/main.py`
 <br />
 Sur windows: 
 <br />
 
 `env/Scripts/activate.bat`
-<br />
-
 `python app/main.py`
 <br />
 4. Executer le frontend comme suit:
