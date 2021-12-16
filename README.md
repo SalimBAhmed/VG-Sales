@@ -9,14 +9,8 @@ Realisé par Salim Ben Ahmed et Najeh Touil
 2. Ouvrez le dossier cloné
 3. Executez le backend comme suit: 
 <br />
-Sur linux ( ubuntu ): 
 
-`$ source env/bin/activate && python3 app/main.py`
-<br />
-Sur windows: 
-<br />
-
-`env/Scripts/activate.bat`
+`pip install -r requirements.txt` puis
 `python app/main.py`
 <br />
 4. Executer le frontend comme suit:
