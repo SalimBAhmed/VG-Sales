@@ -2,6 +2,7 @@ from fastapi import FastAPI
 import uvicorn
 import joblib
 from fastapi.middleware.cors import CORSMiddleware
+from database import db
 
 origins = [
     "http://0.0.0.0",
@@ -55,6 +56,17 @@ async def predictGameSuccess(score: int = 0, pltfrm: int = 7, gnr: int = 3, rtng
     eu_pred = eu_pred.tolist()
     ja_pred = ja_pred.tolist()
     oth_pred = oth_pred.tolist()
+    data = {
+        "score": score,
+        "plateform": pltfrm,
+        "genre": gnr,
+        "rating": rtng,
+        "na_sales": na_pred,
+        "eu_sales": eu_pred,
+        "ja_sales": ja_pred,
+        "other_regions_sales": oth_pred
+    }
+    db.transaction.insert_one(data)
 
     return [na_pred,eu_pred, ja_pred, oth_pred]
 

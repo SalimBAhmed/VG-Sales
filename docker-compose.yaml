@@ -5,6 +5,8 @@ services:
     image: chemuske013/back-end:latest
     ports:
       - 8000:8000
+    environment:
+      - name=value
 
   front-end:
     build: ./front
@@ -13,7 +15,13 @@ services:
     environment:
       - BACKEND_URL="http://back-end:5000/"
     ports:
-      - 8080:8080
-    
-    
-
+      - 80:80
+  
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    ports:
+      - 27017:27017
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=rootuser
+      - MONGO_INITDB_ROOT_PASSWORD=rootpass
