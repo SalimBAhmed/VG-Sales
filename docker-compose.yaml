@@ -1,0 +1,19 @@
+services:
+  back-end:
+    build: ./app/
+    container_name: back-end
+    image: chemuske013/back-end:latest
+    ports:
+      - 8000:8000
+
+  front-end:
+    build: ./front
+    container_name: front-end
+    image: chemuske013/front-end
+    environment:
+      - BACKEND_URL="http://back-end:5000/"
+    ports:
+      - 8080:8080
+    
+    
+

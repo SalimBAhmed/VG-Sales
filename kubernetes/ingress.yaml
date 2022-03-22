@@ -1,0 +1,37 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: front-end-ingress
+  labels:
+    name: front-end-ingress
+spec:
+  rules:
+  - host: vg-predict.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: front-end-service
+            port: 
+              number: 80
+# ---
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: back-end-ingress
+#   labels:
+#     name: back-end-ingress
+# spec:
+#   rules:
+#   - host: vg-backend.localhost
+#     http:
+#       paths:
+#       - pathType: Prefix
+#         path: "/"
+#         backend:
+#           service:
+#             name: back-end-service
+#             port: 
+#               number: 8000

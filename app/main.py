@@ -7,22 +7,23 @@ origins = [
     "http://0.0.0.0",
     "http://localhost",
     "http://localhost:8080",
+    "front-end-service"
 ]
 
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"], # origins
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 #total_sales_model = joblib.load('app/models/total_model.h5')
-na_sales_model = joblib.load('app/models/NA_model.h5')
-europe_sales_model = joblib.load('app/models/europe_model.h5')
-japan_sales_model = joblib.load('app/models/japan_model.h5')
-other_sales_model = joblib.load('app/models/other_model.h5')
+na_sales_model = joblib.load('models/NA_model.h5')
+europe_sales_model = joblib.load('models/europe_model.h5')
+japan_sales_model = joblib.load('models/japan_model.h5')
+other_sales_model = joblib.load('models/other_model.h5')
 
 
 @app.get("/predict/game-success/")

@@ -1,0 +1,8 @@
+fastapi[all]
+uvicorn
+sqlalchemy
+pymysql
+sklearn
+pytest
+xgboost
+seaborn
